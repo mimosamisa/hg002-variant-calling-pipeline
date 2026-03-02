@@ -1,0 +1,27 @@
+# Ignore Nextflow internals
+work/
+.nextflow*
+singularity_cache/
+
+# Ignore large genomic data
+data/
+*.fastq
+*.bam
+*.bai
+*.sam
+
+# Ignore specific large result files (VCFs and BAMs)
+# This allows the small .csv and .json files in 'results/' to be uploaded
+results/alignment/
+results/clair3/
+results/deepvariant/
+results/benchmark/*.vcf.gz
+results/benchmark/*.vcf.gz.tbi
+results/benchmark/*.roc.all.csv.gz
+
+# Ignore local temporary files and logs
+tmp/
+logs/
+*.log
+*.out
+*.err
